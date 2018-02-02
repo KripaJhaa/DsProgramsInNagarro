@@ -115,14 +115,12 @@ class Ideone
 		if(n==0){
 		    return;
 		}
- 
 		ToH(n-1,src,aux,des);
- 
 		System.out.println("move Disc "+n+"-- from "+src+" to "+des);
- 
 		ToH(n-1,aux,des,src);
- 
 	}
+
+	//   2^n -1 
  
 static boolean checkCondition(int arr[][],int i,int j,int no,int n){
 
@@ -137,7 +135,7 @@ static boolean checkCondition(int arr[][],int i,int j,int no,int n){
 		int ly=j- j%rootN;
 
 		for(int x=lx;x<lx+rootN;x++){
-			for(int y=ly;y<3+rootN;y++){
+			for(int y=ly;y<ly+rootN;y++){
 				if(arr[i][j]==no){
 					return false;
 				}
